@@ -1,0 +1,29 @@
+.o-grid {
+    display: grid;
+    grid-template-columns: var(--data-col);
+    grid-gap: var(--data-grid-gap);
+
+    &--eq-col {
+        grid-template-columns: repeat(var(--data-col), 1fr);
+    }
+    &--centered-items-h {
+        .o-grid__item {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &--centered-items-v {
+        .o-grid__item {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &--reverse {
+        direction: rtl;
+        text-align: left;
+    }
+}
+.o-grid__item {
+    background: hotpink;
+    min-height: 100px;
+}
